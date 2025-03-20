@@ -1,0 +1,18 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/addresses/39390000"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "street": "Rua Altino Rodrigues",
+            "city": "Bocaiúva",
+            "state": "Minas Gerais",
+            "zipCode": "39390000"
+        }
+    }
+}

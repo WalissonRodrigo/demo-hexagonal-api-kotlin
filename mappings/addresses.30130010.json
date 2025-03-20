@@ -1,0 +1,18 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/addresses/30130010"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "jsonBody": {
+            "street": "Praça Sete de Setembro",
+            "city": "Belo Horizonte",
+            "state": "Minas Gerais",
+            "zipCode": "30130010"
+        }
+    }
+}
