@@ -6,4 +6,4 @@ data class Customer(
     var address: Address? = null,
     val cpf: String,
     val isValidCpf: Boolean = false
-) {}
+)
