@@ -6,7 +6,7 @@ data class AddressResponse(
     val street: String,
     val city: String,
     val state: String,
-    val zipCode: String
+    val zipCode: String,
 ) {
     fun toAddress() = Address(street = street, city = city, state = state, zipCode = zipCode)
 }

@@ -5,11 +5,12 @@ import br.com.hexagonal.api.application.core.exceptions.ObjectNotFoundException
 import br.com.hexagonal.api.application.ports.`in`.FindCustomerByIdInputPort
 import br.com.hexagonal.api.application.ports.out.FindCustomerByIdOutputPort
 
-class FindCustomerByIdUseCase (
+class FindCustomerByIdUseCase(
     private val findCustomerByIdOutputPort: FindCustomerByIdOutputPort,
 
-): FindCustomerByIdInputPort {
+    ) : FindCustomerByIdInputPort {
 
-     override fun find(id: String): Customer = findCustomerByIdOutputPort.find(id) ?: throw ObjectNotFoundException("Customer not found")
+    override fun find(id: String): Customer =
+        findCustomerByIdOutputPort.find(id) ?: throw ObjectNotFoundException("Customer not found")
 
 }

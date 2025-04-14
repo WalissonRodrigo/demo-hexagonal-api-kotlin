@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component
 
 @Component
 class DeleteCustomerAdapter(
-    private val customerRepository: CustomerRepository
-): DeleteCustomerOutputPort {
+    private val customerRepository: CustomerRepository,
+) : DeleteCustomerOutputPort {
 
     override fun delete(id: String) = customerRepository.deleteById(id)
 

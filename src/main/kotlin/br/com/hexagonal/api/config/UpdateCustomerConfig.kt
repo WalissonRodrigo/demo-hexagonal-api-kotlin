@@ -1,7 +1,6 @@
 package br.com.hexagonal.api.config
 
 import br.com.hexagonal.api.adapters.out.FindAddressByZipCodeAdapter
-import br.com.hexagonal.api.adapters.out.FindCustomerByIdAdapter
 import br.com.hexagonal.api.adapters.out.SendCpfForValidationAdapter
 import br.com.hexagonal.api.adapters.out.UpdateCustomerAdapter
 import br.com.hexagonal.api.application.core.useCase.UpdateCustomerUseCase
@@ -17,7 +16,12 @@ class UpdateCustomerConfig {
         findCustomerByIdInputPort: FindCustomerByIdInputPort,
         findAddressByZipCodeAdapter: FindAddressByZipCodeAdapter,
         updateCustomerAdapter: UpdateCustomerAdapter,
-        sendCpfForValidationAdapter: SendCpfForValidationAdapter
-    ) = UpdateCustomerUseCase(findCustomerByIdInputPort, findAddressByZipCodeAdapter, updateCustomerAdapter, sendCpfForValidationAdapter)
+        sendCpfForValidationAdapter: SendCpfForValidationAdapter,
+    ) = UpdateCustomerUseCase(
+        findCustomerByIdInputPort,
+        findAddressByZipCodeAdapter,
+        updateCustomerAdapter,
+        sendCpfForValidationAdapter
+    )
 
 }

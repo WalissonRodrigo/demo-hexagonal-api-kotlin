@@ -5,5 +5,5 @@ data class Customer(
     val name: String,
     var address: Address? = null,
     val cpf: String,
-    val isValidCpf: Boolean = false
+    val isValidCpf: Boolean = false,
 )

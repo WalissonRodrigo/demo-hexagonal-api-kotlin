@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component
 
 @Component
 class UpdateCustomerAdapter(
-    private val customerRepository: CustomerRepository
-): UpdateCustomerOutputPort {
+    private val customerRepository: CustomerRepository,
+) : UpdateCustomerOutputPort {
     override fun update(customer: Customer) {
         customerRepository.save(CustomerEntity(customer))
     }

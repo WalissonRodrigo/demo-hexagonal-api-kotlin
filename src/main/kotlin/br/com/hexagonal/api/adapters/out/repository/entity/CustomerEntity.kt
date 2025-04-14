@@ -11,9 +11,9 @@ data class CustomerEntity(
     val name: String,
     var address: AddressEntity,
     val cpf: String,
-    val isValidCpf: Boolean
+    val isValidCpf: Boolean,
 ) {
-    constructor(customer: Customer): this(
+    constructor(customer: Customer) : this(
         customer.id,
         customer.name,
         AddressEntity(customer.address!!),

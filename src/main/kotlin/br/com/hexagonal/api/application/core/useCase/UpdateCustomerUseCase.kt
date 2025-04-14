@@ -11,8 +11,8 @@ class UpdateCustomerUseCase(
     private val findCustomerByIdInputPort: FindCustomerByIdInputPort,
     private val findAddressByZipCodeOutputPort: FindAddressByZipCodeOutputPort,
     private val updateCustomerOutputPort: UpdateCustomerOutputPort,
-    private val sendCpfForValidationOutputPort: SendCpfForValidationOutputPort
-): UpdateCustomerInputPort {
+    private val sendCpfForValidationOutputPort: SendCpfForValidationOutputPort,
+) : UpdateCustomerInputPort {
 
     override fun update(customer: Customer, zipCode: String) {
         if (customer.id == null) throw IllegalArgumentException("The ID field cannot be null")

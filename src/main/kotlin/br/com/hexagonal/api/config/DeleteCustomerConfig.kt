@@ -12,7 +12,7 @@ class DeleteCustomerConfig {
     @Bean
     fun deleteCustomer(
         findCustomerByIdInputPort: FindCustomerByIdInputPort,
-        deleteCustomerOutputPort: DeleteCustomerOutputPort
+        deleteCustomerOutputPort: DeleteCustomerOutputPort,
     ) = DeleteCustomerUseCase(
         findCustomerByIdInputPort,
         deleteCustomerOutputPort

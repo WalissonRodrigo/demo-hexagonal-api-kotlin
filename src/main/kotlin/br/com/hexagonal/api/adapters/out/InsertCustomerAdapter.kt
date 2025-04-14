@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component
 @Component
 class InsertCustomerAdapter(
     private val customerRepository: CustomerRepository,
-): InsertCustomerOutputPort {
+) : InsertCustomerOutputPort {
     override fun insert(customer: Customer) {
         customerRepository.save(CustomerEntity(customer))
     }

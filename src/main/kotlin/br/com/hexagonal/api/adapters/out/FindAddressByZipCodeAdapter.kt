@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component
 
 @Component
 class FindAddressByZipCodeAdapter(
-    private val findAddressByZipCodeClient: FindAddressByZipCodeClient
-): FindAddressByZipCodeOutputPort {
+    private val findAddressByZipCodeClient: FindAddressByZipCodeClient,
+) : FindAddressByZipCodeOutputPort {
 
     override fun find(zipCode: String): Address = findAddressByZipCodeClient.find(zipCode).toAddress()
 

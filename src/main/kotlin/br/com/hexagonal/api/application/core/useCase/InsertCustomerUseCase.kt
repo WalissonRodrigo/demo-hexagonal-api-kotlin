@@ -6,12 +6,12 @@ import br.com.hexagonal.api.application.ports.out.FindAddressByZipCodeOutputPort
 import br.com.hexagonal.api.application.ports.out.InsertCustomerOutputPort
 import br.com.hexagonal.api.application.ports.out.SendCpfForValidationOutputPort
 
-class InsertCustomerUseCase (
+class InsertCustomerUseCase(
     private val findAddressByZipCodeOutputPort: FindAddressByZipCodeOutputPort,
     private val insertCustomerOutputPort: InsertCustomerOutputPort,
-    private val sendCpfForValidationOutputPort: SendCpfForValidationOutputPort
-): InsertCustomerInputPort {
-    override fun insert (customer: Customer, zipCode: String) {
+    private val sendCpfForValidationOutputPort: SendCpfForValidationOutputPort,
+) : InsertCustomerInputPort {
+    override fun insert(customer: Customer, zipCode: String) {
         customer.apply {
             address = findAddressByZipCodeOutputPort.find(zipCode)
         }.let {

@@ -7,7 +7,7 @@ data class CustomerMessage(
     val name: String,
     val zipCode: String,
     val cpf: String,
-    val isValidCpf: Boolean
+    val isValidCpf: Boolean,
 ) {
     fun toCustomer() = Customer(id, name, cpf = cpf, isValidCpf = isValidCpf)
 }

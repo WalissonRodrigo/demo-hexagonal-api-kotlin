@@ -9,5 +9,5 @@ import org.springframework.cloud.openfeign.EnableFeignClients
 class HexagonalApplication
 
 fun main(args: Array<String>) {
-	runApplication<HexagonalApplication>(*args)
+    runApplication<HexagonalApplication>(*args)
 }

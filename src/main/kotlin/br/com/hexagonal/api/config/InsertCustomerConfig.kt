@@ -13,7 +13,7 @@ class InsertCustomerConfig {
     fun insertCustomer(
         findAddressByZipCodeAdapter: FindAddressByZipCodeAdapter,
         insertCustomerAdapter: InsertCustomerAdapter,
-        sendCpfForValidationAdapter: SendCpfForValidationAdapter
+        sendCpfForValidationAdapter: SendCpfForValidationAdapter,
     ) = InsertCustomerUseCase(findAddressByZipCodeAdapter, insertCustomerAdapter, sendCpfForValidationAdapter)
 
 }

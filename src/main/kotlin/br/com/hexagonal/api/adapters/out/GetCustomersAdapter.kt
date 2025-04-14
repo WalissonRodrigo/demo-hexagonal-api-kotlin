@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component
 
 @Component
 class GetCustomersAdapter(
-    private val customerRepository: CustomerRepository
-): GetCustomersOutputPort {
+    private val customerRepository: CustomerRepository,
+) : GetCustomersOutputPort {
     override fun find(): List<Customer> =
         customerRepository
             .findAll()
-            .map {  it.toCostumer() }
+            .map { it.toCostumer() }
 
 }

@@ -6,9 +6,9 @@ data class AddressResponse(
     val street: String,
     val city: String,
     val state: String,
-    val zipCode: String
+    val zipCode: String,
 ) {
-    constructor(address: Address): this (
+    constructor(address: Address) : this(
         address.street,
         address.city,
         address.state,

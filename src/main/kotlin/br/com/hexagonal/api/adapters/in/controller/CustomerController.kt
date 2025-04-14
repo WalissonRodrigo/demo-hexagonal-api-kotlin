@@ -6,15 +6,7 @@ import br.com.hexagonal.api.application.core.domain.Customer
 import br.com.hexagonal.api.application.ports.`in`.*
 import jakarta.validation.Valid
 import org.springframework.http.HttpStatus
-import org.springframework.web.bind.annotation.DeleteMapping
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.PutMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.ResponseStatus
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/v1/customers")
@@ -23,7 +15,7 @@ class CustomerController(
     private val findCustomerByIdInputPort: FindCustomerByIdInputPort,
     private val updateCustomerInputPort: UpdateCustomerInputPort,
     private val getCustomersInputPort: GetCustomersInputPort,
-    private val deleteCustomerInputPort: DeleteCustomerInputPort
+    private val deleteCustomerInputPort: DeleteCustomerInputPort,
 ) {
 
     @GetMapping()

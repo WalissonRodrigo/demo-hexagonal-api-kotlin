@@ -10,5 +10,5 @@ data class CustomerRequest(
     val cpf: String,
 
     @field:NotBlank(message = "Zip Code must not be blank")
-    val zipCode: String
+    val zipCode: String,
 )
