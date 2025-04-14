@@ -168,7 +168,7 @@ class NamingConventionTest {
         .haveSimpleNameEndingWith("Client")
         .`as`("Clients classes should be suffixed Client in class name")
 
-     @ArchTest
+    @ArchTest
     val `should be suffixed repository` = classes()
         .that()
         .resideInAPackage("..repository")
